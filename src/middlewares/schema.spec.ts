@@ -93,7 +93,7 @@ describe('on each field', () => {
         },
       },
       bar: {
-        whitelist: {
+        allowlist: {
           options: ['a'],
         },
       },

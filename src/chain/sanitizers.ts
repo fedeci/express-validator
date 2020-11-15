@@ -8,7 +8,8 @@ export interface Sanitizers<Return> {
   replace(values_to_replace: any, new_value: any): Return;
 
   // validator's sanitizers
-  blacklist(chars: string): Return;
+  allowlist(chars: string): Return;
+  denylist(chars: string): Return;
   escape(): Return;
   unescape(): Return;
   ltrim(chars?: string): Return;
@@ -23,5 +24,4 @@ export interface Sanitizers<Return> {
   toLowerCase(): Return;
   toUpperCase(): Return;
   trim(chars?: string): Return;
-  whitelist(chars: string): Return;
 }

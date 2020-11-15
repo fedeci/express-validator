@@ -31,7 +31,7 @@ export class SanitizersImpl<Chain> implements Sanitizers<Chain> {
     return this.chain;
   }
 
-  blacklist(chars: string) {
+  denylist(chars: string) {
     return this.addStandardSanitization(validator.blacklist, chars);
   }
   escape() {
@@ -78,7 +78,7 @@ export class SanitizersImpl<Chain> implements Sanitizers<Chain> {
   trim(chars?: string) {
     return this.addStandardSanitization(validator.trim, chars);
   }
-  whitelist(chars: string) {
+  allowlist(chars: string) {
     return this.addStandardSanitization(validator.whitelist, chars);
   }
 }

@@ -37,12 +37,12 @@ it('has methods for all standard validators', () => {
       );
     });
 
-  sanitizers.blacklist('foo');
+  sanitizers.denylist('foo');
   expect(builder.addItem).toHaveBeenLastCalledWith(
     new Sanitization(validator.blacklist, false, ['foo']),
   );
 
-  sanitizers.whitelist('bar');
+  sanitizers.allowlist('bar');
   expect(builder.addItem).toHaveBeenLastCalledWith(
     new Sanitization(validator.whitelist, false, ['bar']),
   );
